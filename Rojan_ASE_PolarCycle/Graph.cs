@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Rojan_ASE_PolarCycle
 {
-    public partial class Calendar : Form
+    public partial class Graph : Form
     {
-        public Calendar()
+        public Graph()
         {
             InitializeComponent();
         }
 
-        private void Calendar_Load(object sender, EventArgs e)
+        private void Graph_Load(object sender, EventArgs e)
         {
 
         }

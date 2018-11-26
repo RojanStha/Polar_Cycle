@@ -1,6 +1,6 @@
 ﻿namespace Rojan_ASE_PolarCycle
 {
-    partial class Calendar
+    partial class Graph
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Calendar
+            // Graph
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1019, 496);
-            this.Name = "Calendar";
-            this.Text = "Calendar";
-            this.Load += new System.EventHandler(this.Calendar_Load);
+            this.ClientSize = new System.Drawing.Size(1014, 499);
+            this.Name = "Graph";
+            this.Text = "Graph";
+            this.Load += new System.EventHandler(this.Graph_Load);
             this.ResumeLayout(false);
 
         }
