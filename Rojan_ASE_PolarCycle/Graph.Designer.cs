@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
+            this.zedGraphControl2 = new ZedGraph.ZedGraphControl();
             this.SuspendLayout();
             // 
-            // zedGraphControl1
+            // zedGraphControl2
             // 
-            this.zedGraphControl1.IsShowPointValues = false;
-            this.zedGraphControl1.Location = new System.Drawing.Point(12, 8);
-            this.zedGraphControl1.Name = "zedGraphControl1";
-            this.zedGraphControl1.PointValueFormat = "G";
-            this.zedGraphControl1.Size = new System.Drawing.Size(922, 548);
-            this.zedGraphControl1.TabIndex = 0;
+            this.zedGraphControl2.IsShowPointValues = false;
+            this.zedGraphControl2.Location = new System.Drawing.Point(1, 2);
+            this.zedGraphControl2.Name = "zedGraphControl2";
+            this.zedGraphControl2.PointValueFormat = "G";
+            this.zedGraphControl2.Size = new System.Drawing.Size(944, 561);
+            this.zedGraphControl2.TabIndex = 1;
             // 
             // Graph
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 568);
-            this.Controls.Add(this.zedGraphControl1);
+            this.Controls.Add(this.zedGraphControl2);
             this.Name = "Graph";
             this.Text = "Graph";
             this.Load += new System.EventHandler(this.Graph_Load);
@@ -55,6 +55,6 @@
 
         #endregion
 
-        private ZedGraph.ZedGraphControl zedGraphControl1;
+        private ZedGraph.ZedGraphControl zedGraphControl2;
     }
 }

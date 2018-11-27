@@ -88,6 +88,7 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -474,7 +475,7 @@
             // graphToolStripMenuItem
             // 
             this.graphToolStripMenuItem.Name = "graphToolStripMenuItem";
-            this.graphToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.graphToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.graphToolStripMenuItem.Text = "Graph";
             this.graphToolStripMenuItem.Click += new System.EventHandler(this.graphToolStripMenuItem_Click);
             // 
@@ -511,9 +512,9 @@
             this.groupBox1.Controls.Add(this.lblstartdate);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.lbllength);
-            this.groupBox1.Location = new System.Drawing.Point(392, 27);
+            this.groupBox1.Location = new System.Drawing.Point(276, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(469, 137);
+            this.groupBox1.Size = new System.Drawing.Size(585, 137);
             this.groupBox1.TabIndex = 85;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Header";
@@ -522,7 +523,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 84);
+            this.label3.Location = new System.Drawing.Point(401, 80);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 16);
@@ -544,7 +545,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(206, 114);
+            this.label9.Location = new System.Drawing.Point(6, 113);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 16);
@@ -555,7 +556,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(208, 84);
+            this.label8.Location = new System.Drawing.Point(400, 54);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 16);
@@ -566,7 +567,7 @@
             // 
             this.lblsmode.AutoSize = true;
             this.lblsmode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsmode.Location = new System.Drawing.Point(277, 84);
+            this.lblsmode.Location = new System.Drawing.Point(469, 54);
             this.lblsmode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblsmode.Name = "lblsmode";
             this.lblsmode.Size = new System.Drawing.Size(50, 16);
@@ -577,7 +578,7 @@
             // 
             this.lblFileName.AutoSize = true;
             this.lblFileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFileName.Location = new System.Drawing.Point(297, 114);
+            this.lblFileName.Location = new System.Drawing.Point(97, 113);
             this.lblFileName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFileName.Name = "lblFileName";
             this.lblFileName.Size = new System.Drawing.Size(59, 16);
@@ -588,7 +589,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 114);
+            this.label4.Location = new System.Drawing.Point(398, 20);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 16);
@@ -599,7 +600,7 @@
             // 
             this.lblinterval.AutoSize = true;
             this.lblinterval.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblinterval.Location = new System.Drawing.Point(78, 114);
+            this.lblinterval.Location = new System.Drawing.Point(469, 20);
             this.lblinterval.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblinterval.Name = "lblinterval";
             this.lblinterval.Size = new System.Drawing.Size(51, 16);
@@ -621,7 +622,7 @@
             // 
             this.lbldate.AutoSize = true;
             this.lbldate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldate.Location = new System.Drawing.Point(60, 84);
+            this.lbldate.Location = new System.Drawing.Point(454, 80);
             this.lbldate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbldate.Name = "lbldate";
             this.lbldate.Size = new System.Drawing.Size(35, 16);
@@ -770,11 +771,23 @@
             this.pictureBox1.TabIndex = 92;
             this.pictureBox1.TabStop = false;
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(12, 81);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(243, 16);
+            this.label24.TabIndex = 93;
+            this.label24.Text = "2018 All Right reserved Rojan Shrestha.\r\n";
+            this.label24.Click += new System.EventHandler(this.label24_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1176, 650);
+            this.Controls.Add(this.label24);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dataGridView);
@@ -862,5 +875,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label lblTotaldistance;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label24;
     }
 }

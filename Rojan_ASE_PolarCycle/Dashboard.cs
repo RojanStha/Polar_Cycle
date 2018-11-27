@@ -44,6 +44,11 @@ namespace Rojan_ASE_PolarCycle
             gr.Show();
         }
 
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public List<hrdata> hr = new List<hrdata>();
 
         parameters allParameters = new parameters();
@@ -65,7 +70,8 @@ namespace Rojan_ASE_PolarCycle
                 {
                     string filename = browseFile.FileName;
                     //Reading the File
-
+                    lblFileName.Visible = true;
+                    lblFileName.Text = browseFile.FileName;
                     Filelines = File.ReadAllLines(filename);
 
 
@@ -123,11 +129,14 @@ namespace Rojan_ASE_PolarCycle
 
                     //read text with certain symbols
                     lineIndex = readFileText.IndexOf("StartTime=");
-                    string lineTime = readFileText.Substring(lineIndex + 10, 8); // for the time with hour minute and seconds
+                    string lineTime = readFileText.Substring(lineIndex + 10, 8); 
+                    // for the time with hour minute and seconds
                     lineIndex = readFileText.IndexOf("Interval=");
-                    string lineinter1 = readFileText.Substring(lineIndex + 9, 1); // for the time with hour minute and seconds 
+                    string lineinter1 = readFileText.Substring(lineIndex + 9, 1);
+                    // for the time with hour minute and seconds 
                     lineIndex = readFileText.IndexOf("Length=");
-                    string lineLength = readFileText.Substring(lineIndex + 7, 8);  // for the time with hour minute and seconds
+                    string lineLength = readFileText.Substring(lineIndex + 7, 8);
+                    // for the time with hour minute and seconds
                     string textTimeStamp = dateLines + "   " + lineTime;
                     StreamReader sr = new StreamReader(browseFile.FileName, System.Text.Encoding.Default);
                     HData = null;
@@ -359,23 +368,11 @@ namespace Rojan_ASE_PolarCycle
                             lblstartdate.Text = " " + allParameters.StartTime;
                             lbllength.Text = " " + allParameters.Length;
                             lblinterval.Text = " " + allParameters.Interval;
-                           // lbl.Text = "Upper1: " + allParameters.Upper1;
-                           // label24.Text = "Upper2: " + allParameters.Upper2;
-                           // label25.Text = "Upper3: " + allParameters.Upper3;
-                           // label26.Text = "Lower1: " + allParameters.Lower1;
-                           // label27.Text = "Lower2: " + allParameters.Lower2;
-                           // label28.Text = "Lower3: " + allParameters.Lower3;
-                           // label29.Text = "Timer1: " + allParameters.Timer1;
-                           // label31.Text = "Timer2: " + allParameters.Timer2;
-                           // label32.Text = "Timer3: " + allParameters.Timer3;
+                          
 
-                            //.Text = "ActiveLimit: " + allParameters.ActiveLimit;
+                          
                             lblmaxheartrate.Text = "" + allParameters.MaxHR;
-                           // lblh.Text = "RestHR: " + allParameters.RestHR;
-                           // label36.Text = "StartDelay: " + allParameters.StartDelay;
-                           // label37.Text = "VO2max: " + allParameters.VO2max;
-                           // label38.Text = "Weight: " + allParameters.Weight;
-
+                         
 
 
                             break;
@@ -565,8 +562,8 @@ namespace Rojan_ASE_PolarCycle
 
             //calculating the stats of heart rate
             lblavgheartrate.Text = "" + (sum / count).ToString(); // Average Heart Rate
-            lblmaxheartrate.Text = " " + maxHeartRate.ToString(); //Maximum Heart Rate
-            lblminheartrate.Text = "" + minHeartRate.ToString(); //Minimum Heart Rate
+            lblmaxheartrate.Text = " " + maxHeartRate.ToString() + " beats per minute"; //Maximum Heart Rate
+            lblminheartrate.Text = "" + minHeartRate.ToString() + " beats per minute"; //Minimum Heart Rate
              lb10 = lblavgspeed.Text = "" + avgspeed.ToString() + " Miles/Hr"; // Average Speed
             lb4 = "" + (avgspeed * 1.6).ToString() + " KM/Hr";//Average Speed km/hr
 

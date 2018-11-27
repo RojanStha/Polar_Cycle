@@ -19,6 +19,7 @@ namespace Rojan_ASE_PolarCycle
         }
 
         List<hrdata> hr = new List<hrdata>();
+        private object g;
 
         public void setHR(List<hrdata> hr)
         {
@@ -27,7 +28,7 @@ namespace Rojan_ASE_PolarCycle
 
         private void Graph_Load(object sender, EventArgs e)
         {
-
+            plotGraph();
         }
 
         //heart rate data build up
@@ -108,7 +109,7 @@ namespace Rojan_ASE_PolarCycle
         //plot graph method
         public void plotGraph()
         {
-            GraphPane myPane = zedGraphControl1.GraphPane;
+            GraphPane myPane = zedGraphControl2.GraphPane;
 
             // Setting the Titles
             myPane.Title = "Graph Analytics for Speed, Cadence, Altitude, Heart Rate and Power";
@@ -121,8 +122,8 @@ namespace Rojan_ASE_PolarCycle
             myPane.YAxis.Min = 0.0;
             myPane.YAxis.Max = 500.0;
 
-           // myPane.AxisChange(zedGraphControl1);
-            zedGraphControl1.Refresh();
+          //  myPane.AxisChange();
+            zedGraphControl2.Refresh();
 
             PointPairList HeartRatePairList = new PointPairList();
             PointPairList SpeedPairList = new PointPairList();
@@ -152,6 +153,7 @@ namespace Rojan_ASE_PolarCycle
             LineItem AltitudeCurve = myPane.AddCurve("Altitude", AltitudePairList, Color.Brown, SymbolType.None);
 
         }
+
 
     }
 }
