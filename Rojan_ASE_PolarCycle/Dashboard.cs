@@ -19,20 +19,8 @@ namespace Rojan_ASE_PolarCycle
 
         string lb1, lb2, lb3, lb4, lb5, lb6, lb7, lb8, lb9, lb10, lb11, lb12;
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblversion_Click(object sender, EventArgs e)
-        {
-
-        }
+    
+       
 
         public Dashboard()
         {
@@ -41,6 +29,21 @@ namespace Rojan_ASE_PolarCycle
 
 
         List<header> headVal = new List<header>();
+
+        private void btngraph_Click(object sender, EventArgs e)
+        {
+            Graph gr = new Graph();
+            gr.setHR(hr);
+            gr.Show();
+        }
+
+        private void graphToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Graph gr = new Graph();
+            gr.setHR(hr);
+            gr.Show();
+        }
+
         public List<hrdata> hr = new List<hrdata>();
 
         parameters allParameters = new parameters();
@@ -76,37 +79,33 @@ namespace Rojan_ASE_PolarCycle
                             {
 
                                 headVal.Add(new header { headername = Filelines[linecount].Substring(1, Filelines[linecount].Length - 2), headerline = linecount });
-                            
-                                lblversion.Visible = false;
-                                lblstartdate.Visible = false;
-                                lbldate.Visible = false;
 
-                                lblinterval.Visible = false;
-
-                                lblmonitor.Visible = false;
-                                lbllength.Visible = false;
-lblsmode.Visible = false;
-                                lblFileName.Visible = false;
-
-                                btngraph.Visible = false;
-
+                                lblversion.Visible = true;
+                                lblstartdate.Visible = true;
+                                lbldate.Visible = true;
+                                lblinterval.Visible = true;
+                                lblmonitor.Visible = true;
+                                lbllength.Visible = true;
+                                lblsmode.Visible = true;
+                                lblFileName.Visible = true;
+                                btngraph.Visible = true;
                                 dataGridView.Visible = true;
+                                lblmaxheartrate.Visible = true;
+                                lblminheartrate.Visible = true;
+                                lblavgheartrate.Visible = true;
+                                lblmaxspeed.Visible = true;
+                                lblminspeed.Visible = true;
+                                lblavgspeed.Visible = true;
+                                lblmaxpower.Visible = true;
+                                lblminpower.Visible = true;
+                                lblavgpower.Visible = true;
+                                lblmaxaltitude.Visible = true;
+                                lblminaltitude.Visible = true;
+                                lblavgaltitude.Visible = true;
 
 
-                                lblmaxheartrate.Visible = false;
-                                lblminheartrate.Visible = false;
-                                lblavgheartrate.Visible = false;
-                                lblmaxspeed.Visible = false;
-                                lblminspeed.Visible = false;
-                                lblavgspeed.Visible = false;
 
-                                lblmaxpower.Visible = false;
-                                lblminpower.Visible = false;
-                                lblavgpower.Visible = false;
 
-                                lblmaxaltitude.Visible = false;
-lblminaltitude.Visible = false;
-                                lblavgaltitude.Visible = false;
                             }
                         }
                     }
@@ -129,8 +128,6 @@ lblminaltitude.Visible = false;
                     string lineinter1 = readFileText.Substring(lineIndex + 9, 1); // for the time with hour minute and seconds 
                     lineIndex = readFileText.IndexOf("Length=");
                     string lineLength = readFileText.Substring(lineIndex + 7, 8);  // for the time with hour minute and seconds
-
-
                     string textTimeStamp = dateLines + "   " + lineTime;
                     StreamReader sr = new StreamReader(browseFile.FileName, System.Text.Encoding.Default);
                     HData = null;
@@ -176,9 +173,7 @@ lblminaltitude.Visible = false;
                     pwrbal.HeaderText = "Power Balance";
                     int colIndex7 = dataGridView.Columns.Add(pwrbal);
 
-                    DataGridViewColumn moveavg = new DataGridViewTextBoxColumn();
-                    moveavg.HeaderText = "Moving Avg";
-                    int colIndex8 = dataGridView.Columns.Add(moveavg);
+            
 
 
 
@@ -260,28 +255,30 @@ lblminaltitude.Visible = false;
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            lblversion.Visible = true;
-            lblstartdate.Visible = true;
-            lbldate.Visible = true;
-            lblinterval.Visible = true;
-            lblmonitor.Visible = true;
-            lbllength.Visible = true;
-            lblsmode.Visible = true;
-            lblFileName.Visible = true;
-            btngraph.Visible = true;
+
+
+            lblversion.Visible = false;
+            lblstartdate.Visible = false;
+            lbldate.Visible = false;
+            lblinterval.Visible = false;
+            lblmonitor.Visible = false;
+            lbllength.Visible = false;
+            lblsmode.Visible = false;
+            lblFileName.Visible = false;
+            btngraph.Visible = false;
             dataGridView.Visible = true;
-            lblmaxheartrate.Visible = true;
-            lblminheartrate.Visible = true;
-            lblavgheartrate.Visible = true;
-            lblmaxspeed.Visible = true;
-            lblminspeed.Visible = true;
-            lblavgspeed.Visible = true;
-            lblmaxpower.Visible = true;
-            lblminpower.Visible = true;
-            lblavgpower.Visible = true;
-            lblmaxaltitude.Visible = true;
-            lblminaltitude.Visible = true;
-            lblavgaltitude.Visible = true;
+            lblmaxheartrate.Visible = false;
+            lblminheartrate.Visible = false;
+            lblavgheartrate.Visible = false;
+            lblmaxspeed.Visible = false;
+            lblminspeed.Visible = false;
+            lblavgspeed.Visible = false;
+            lblmaxpower.Visible = false;
+            lblminpower.Visible = false;
+            lblavgpower.Visible = false;
+            lblmaxaltitude.Visible = false;
+            lblminaltitude.Visible = false;
+            lblavgaltitude.Visible = false;
 
 
 
@@ -355,13 +352,13 @@ lblminaltitude.Visible = false;
 
 
                             //adding the getter and setter
-                            lblversion.Text = "Version: " + allParameters.Version;
-                            lblmonitor.Text = "Monitor: " + allParameters.Monitor;
-                            lblsmode.Text = "SMode: " + allParameters.SMode;
-                            lbldate.Text = "Date: " + allParameters.Date;
-                            lblstartdate.Text = "Start Time: " + allParameters.StartTime;
-                            lbllength.Text = "Length: " + allParameters.Length;
-                            lblinterval.Text = "Interval: " + allParameters.Interval;
+                            lblversion.Text = "" + allParameters.Version;
+                            lblmonitor.Text = " " + allParameters.Monitor;
+                            lblsmode.Text = " " + allParameters.SMode;
+                            lbldate.Text = "" + allParameters.Date;
+                            lblstartdate.Text = " " + allParameters.StartTime;
+                            lbllength.Text = " " + allParameters.Length;
+                            lblinterval.Text = " " + allParameters.Interval;
                            // lbl.Text = "Upper1: " + allParameters.Upper1;
                            // label24.Text = "Upper2: " + allParameters.Upper2;
                            // label25.Text = "Upper3: " + allParameters.Upper3;
@@ -373,7 +370,7 @@ lblminaltitude.Visible = false;
                            // label32.Text = "Timer3: " + allParameters.Timer3;
 
                             //.Text = "ActiveLimit: " + allParameters.ActiveLimit;
-                            lblmaxheartrate.Text = "MaxHR: " + allParameters.MaxHR;
+                            lblmaxheartrate.Text = "" + allParameters.MaxHR;
                            // lblh.Text = "RestHR: " + allParameters.RestHR;
                            // label36.Text = "StartDelay: " + allParameters.StartDelay;
                            // label37.Text = "VO2max: " + allParameters.VO2max;
@@ -570,34 +567,57 @@ lblminaltitude.Visible = false;
             lblavgheartrate.Text = "" + (sum / count).ToString(); // Average Heart Rate
             lblmaxheartrate.Text = " " + maxHeartRate.ToString(); //Maximum Heart Rate
             lblminheartrate.Text = "" + minHeartRate.ToString(); //Minimum Heart Rate
-            lblavgspeed.Text = "" + avgspeed.ToString() + " Miles/Hr"; // Average Speed
-            lb4 = "Average Speed: " + (avgspeed * 1.6).ToString() + " KM/Hr";//Average Speed km/hr
+             lb10 = lblavgspeed.Text = "" + avgspeed.ToString() + " Miles/Hr"; // Average Speed
+            lb4 = "" + (avgspeed * 1.6).ToString() + " KM/Hr";//Average Speed km/hr
 
-            lb12 = label2.Text = "Average Altitude: " + avgaltitude.ToString() + " Meter";
-            lb6 = "Average Altitude: " + (avgaltitude / 0.304).ToString().Substring(0, 4) + " Feet";
+            lb12 = lblavgaltitude.Text = " " + avgaltitude.ToString() + " Meter"; // Average Altitude
+            lb6 = " " + (avgaltitude / 0.304).ToString().Substring(0, 4) + " Feet";// Average Altitude In feet
 
-            label3.Text = "Average Power: " + avgPower.ToString() + " Watt";
+            lblavgpower.Text = "" + avgPower.ToString() + " Watt"; // Average Power in watt
 
             //calculating for altitude ,power ,speed
-            label10.Text = "Maximun Power: " + maxPower.ToString() + "Watt";
+            lblmaxpower.Text = "" + maxPower.ToString() + "Watt"; // maximum powein watt
 
-            lb7 = label11.Text = "Total Distance covered: " + (avgspeed * 1).ToString() + " Miles";
-            lb1 = "Total Distance covered: " + (avgspeed / 0.6).ToString().Substring(0, 4) + " KM";
+            lb7 = lblTotaldistance.Text = " " + (avgspeed * 1).ToString() + " Miles";// totaldistance in miles 
+            lb1 = " " + (avgspeed / 0.6).ToString().Substring(0, 4) + " KM"; // total distance in km
 
 
-            lb11 = label12.Text = "Maximum Altitude: " + maxAltitude.ToString() + "Meter";
+            lb11 = lblmaxaltitude.Text = " " + maxAltitude.ToString() + "Meter"; // maximum altitudein meter
             double tomile = Convert.ToDouble(maxSpeed) * 0.62137119;
-            lb5 = "Maximum Altitude: " + (maxAltitude / 0.304).ToString().Substring(0, 4) + "Feet";
+            lb5 = " " + (maxAltitude / 0.304).ToString().Substring(0, 4) + "Feet";
 
-            lb8 = label14.Text = "Maximum Speed: " + (maxSpeed + tomile).ToString() + " Miles/Hr";
-            lb2 = "Maximum Speed: " + (maxSpeed).ToString() + " KM/Hr";
+            lb8 = lblmaxspeed.Text = " " + (maxSpeed + tomile).ToString() + " Miles/Hr"; // max speed in miles/hr
+            lb2 = "" + (maxSpeed).ToString() + " KM/Hr";
 
-            lb9 = label15.Text = "Minimum Speed: " + minSpeed.ToString() + " Miles/Hr";
-            lb3 = "Minimum Speed: " + (minSpeed * 1.6).ToString() + " KM/Hr";
+            lb9 = lblminspeed.Text = "" + minSpeed.ToString() + " Miles/Hr";// minimum speedin miles/hr
+            lb3 = "" + (minSpeed * 1.6).ToString() + " KM/Hr";
 
            // cycleInfo.DataSource = dt;
         }
 
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+
+            lblTotaldistance.Text = lb1.ToString();
+            lblmaxaltitude.Text = lb5.ToString();
+            lblmaxspeed.Text = lb2.ToString();
+            lblminspeed.Text = lb3.ToString();
+            lblavgspeed.Text = lb4.ToString();
+            lblavgaltitude.Text = lb6.ToString();
+
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            lblTotaldistance.Text = lb7.ToString();
+            lblmaxaltitude.Text = lb11.ToString();
+            lblmaxspeed.Text = lb8.ToString();
+            lblminspeed.Text = lb9.ToString();
+            lblavgspeed.Text = lb10.ToString();
+            lblavgaltitude.Text = lb12.ToString();
+        }
 
 
 

@@ -9,3 +9,4 @@ E:\Rojan_Polar_Cycle\Polar_Cycle\Rojan_ASE_PolarCycle\obj\Debug\Rojan_ASE_PolarC
 E:\Rojan_Polar_Cycle\Polar_Cycle\Rojan_ASE_PolarCycle\obj\Debug\Rojan_ASE_PolarCycle.exe
 E:\Rojan_Polar_Cycle\Polar_Cycle\Rojan_ASE_PolarCycle\obj\Debug\Rojan_ASE_PolarCycle.pdb
 E:\Rojan_Polar_Cycle\Polar_Cycle\Rojan_ASE_PolarCycle\obj\Debug\Rojan_ASE_PolarCycle.Graph.resources
+E:\Rojan_Polar_Cycle\Polar_Cycle\Rojan_ASE_PolarCycle\bin\Debug\ZedGraph.dll

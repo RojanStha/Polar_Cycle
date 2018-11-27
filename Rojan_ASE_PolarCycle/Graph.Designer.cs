@@ -28,13 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.SuspendLayout();
+            // 
+            // zedGraphControl1
+            // 
+            this.zedGraphControl1.IsShowPointValues = false;
+            this.zedGraphControl1.Location = new System.Drawing.Point(12, 8);
+            this.zedGraphControl1.Name = "zedGraphControl1";
+            this.zedGraphControl1.PointValueFormat = "G";
+            this.zedGraphControl1.Size = new System.Drawing.Size(922, 548);
+            this.zedGraphControl1.TabIndex = 0;
             // 
             // Graph
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1014, 499);
+            this.ClientSize = new System.Drawing.Size(946, 568);
+            this.Controls.Add(this.zedGraphControl1);
             this.Name = "Graph";
             this.Text = "Graph";
             this.Load += new System.EventHandler(this.Graph_Load);
@@ -43,5 +54,7 @@
         }
 
         #endregion
+
+        private ZedGraph.ZedGraphControl zedGraphControl1;
     }
 }
